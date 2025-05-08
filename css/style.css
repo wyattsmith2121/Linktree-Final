@@ -1,16 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 :root {
-  --primaryText: #fff;
+  --primaryText: #ffffff;
   --secondaryText: #ff015e;
-  --primary: rgba(156, 39, 176, 0.6);
+  --primary: rgba(0, 0, 139, 0.7); /* dark blue */
   --secondary: rgba(255, 1, 94, 0.6);
-  --buttonHover: rgba(156, 39, 176, 0.4);
-  --smallButtonHover: rgba(255, 255, 255, 0.1);
+  --buttonHover: rgba(0, 0, 139, 0.5);
+  --smallButtonHover: rgba(0, 0, 0, 0.25);
 }
 
 html {
   box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
   height: 100%;
 }
 
@@ -23,57 +25,80 @@ html {
 body {
   margin: 0;
   min-height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/background.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  font-family: 'Inter', sans-serif;
-  font-size: 20px;
-  color: var(--primaryText);
-  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  font-size: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--primaryText); /* Makes all text white */
+  padding-top: 2em; /* Moves content closer to top */
 }
 
-header h1 {
-  margin-top: 1em;
+h1, h2, p {
+  color: var(--primaryText);
+  text-align: center;
 }
 
 img {
+  margin: 0.5em auto;
+  display: block;
   border-radius: 50%;
   height: 150px;
-  width: 150px;
+  max-width: 100%;
   object-fit: cover;
 }
 
 .container {
   width: 100%;
-  max-width: 768px;
+  padding: 0;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1em;
+  justify-content: flex-start;
+}
+
+.image-container {
+  text-align: center;
+  width: 100%;
+}
+
+.section-header {
+  padding-top: 0.5em;
+}
+
+.button,
+.intro,
+.links-container,
+.slidedown,
+.external-link {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: var(--primaryText);
+  text-align: center;
+  margin: 0.5em auto; /* Adds spacing between buttons */
 }
 
 .button,
 .external-link {
-  background-color: var(--primary);
   border: 1px solid var(--primaryText);
   border-radius: 20px;
-  padding: 0.5em 1em;
-  margin: 0.5em auto;
-  text-decoration: none;
-  color: var(--primaryText);
-  width: 85%;
-  max-width: 500px;
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  background-color: var(--primary);
+  cursor: pointer;
+  transition: 0.2s all;
   display: inline-block;
-  transition: background-color 0.2s;
 }
 
-.button:hover,
-.external-link:hover {
+.button:hover {
   background-color: var(--buttonHover);
 }
 
@@ -81,25 +106,87 @@ img {
   background-color: var(--secondary);
 }
 
+.button:active,
+.external-link:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+.intro {
+  margin: 0 auto;
+}
+
 .slidedown {
+  margin: 0 auto;
+  padding: 0;
   height: 0;
   overflow: hidden;
   transition: height 0.4s ease;
-  width: 85%;
-  margin: 0 auto;
-  color: var(--primaryText);
+}
+
+.external-link {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em auto;
+  height: 2em;
+  width: 8em;
+}
+
+.external-link:hover {
+  background-color: var(--smallButtonHover);
 }
 
 .description {
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
-  padding: 1em;
-  margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0 0.6em;
+}
+
+.description > p {
+  margin: 0.5em 0;
   color: var(--primaryText);
 }
 
-.footer {
-  font-size: 0.8em;
-  padding: 1em;
-  color: rgba(255, 255, 255, 0.8);
+footer {
+  font-size: 0.66em;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(225, 225, 225, 0.8);
+  width: 100%;
+  min-height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+footer a {
+  color: inherit;
+}
+
+/* Responsive tweaks */
+@media (min-width: 540px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .button,
+  .intro,
+  .slidedown {
+    width: 85%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .button,
+  .intro,
+  .slidedown {
+    width: 40%;
+  }
 }
