@@ -37,7 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   color: var(--primaryText); /* Makes all text white */
-  padding-top: 2em; /* Moves content closer to top */
+  padding-top: 2em; 
 }
 
 h1, h2, p {
@@ -84,18 +84,25 @@ img {
   text-decoration: none;
   color: var(--primaryText);
   text-align: center;
-  margin: 0.5em auto; /* Adds spacing between buttons */
+  margin: 0.5em auto; 
 }
 
 .button,
 .external-link {
-  border: 1px solid var(--primaryText);
-  border-radius: 20px;
-  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-  background-color: var(--primary);
-  cursor: pointer;
-  transition: 0.2s all;
-  display: inline-block;
+    border: 1px solid var(--primaryText);
+    border-radius: 20px;
+    box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--primaryText);
+    cursor: pointer;
+    transition: 0.2s all;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px; 
+    margin: 0.5em auto;
+    padding: 0.5em 1em; 
+    text-align: center; 
 }
 
 .button:hover {
