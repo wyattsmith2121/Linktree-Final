@@ -1,47 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Wyatt's Website</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-RXf+QSDCUQs6FHn8CkT3MEy7xZHD53UsHz20sjz2Ut5WcXW14UHu5DjyRZH9yoLhbsO+zD2Q+f1DLFZGLIrLBw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- YouTube embed container styling -->
+  <style>
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+
+    .embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 <body>
-  <!-- Profile Photo Section -->
   <div class="container">
     <div class="image-container">
-      <img src="images/profile.jpg" alt="Picture of me">
+      <img src="images/profile.jpg" alt="Picture of me" />
     </div>
+
     <h1>Hello! My name is Wyatt and I am from Roanoke, VA. I plan on majoring in Finance.</h1>
 
     <!-- Blog Post -->
-    <div class="button toggle">Blog post</div>
+    <div class="button toggle"><i class="fab fa-medium"></i> Blog post</div>
     <div class="slidedown">
       <div class="description">
         <h2>Blog post title</h2>
         <p>My blog post had to do with the Tri-Whistle, an innovative way to change how sports complexes work through pitches.</p>
-        <a href="PLACEHOLDER" class="external-link" target="_blank">Read</a>
+        <a href="https://medium.com/@wyattsmith2121/a-solution-to-whistle-confusion-the-tri-whistle-03e1bfb609dc" class="button" target="_blank">Read</a>
       </div>
     </div>
 
     <!-- Podcast -->
-    <div class="button toggle">Podcast</div>
+    <div class="button toggle"><i class="fab fa-soundcloud"></i> Podcast</div>
     <div class="slidedown">
       <div class="description">
         <h2>Collaboration podcast with turtles</h2>
         <p>We talk about content creation and the evolution of it. I specifically use MrBeast and compare his old and new content.</p>
-        <a href="https://soundcloud.com/bilal-aridi-95691137/turtles-final-version" class="external-link" target="_blank">Listen</a>
+        <a href="https://soundcloud.com/bilal-aridi-95691137/turtles-final-version" class="button" target="_blank">Listen</a>
+
+        <!-- SoundCloud embed -->
+        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1715183180&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
       </div>
     </div>
 
     <!-- Video Project -->
-    <div class="button toggle">Video Project</div>
+    <div class="button toggle"><i class="fab fa-youtube"></i> Video Project</div>
     <div class="slidedown">
       <div class="description">
         <h2>Rule of 72</h2>
         <p>I briefly overview the economic rule known as The Rule of 72. I apply the rule and show how even broke college students can take advantage of the concept.</p>
-        <a href="https://www.youtube.com/watch?v=Ie45ncblqtQ" class="external-link" target="_blank">Watch</a>
+        <a href="https://www.youtube.com/watch?v=Ie45ncblqtQ" class="button" target="_blank">Watch</a>
+
+        <!-- YouTube embed -->
+        <div class="embed-container">
+          <iframe src="https://www.youtube.com/embed/Ie45ncblqtQ" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
 
@@ -58,6 +95,7 @@
   <footer>
     <p>Created by Wyatt</p>
   </footer>
+
   <script src="js/slider.js"></script>
 </body>
 </html>
