@@ -3,84 +3,78 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wyatt's Website</title>
+  <title>Wyatt Smith – Link Hub</title>
 
-  <!-- Roboto font -->
+  <!-- Google Font - Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Main stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Font Awesome (WORKING version) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-RXf+QSDCUQs6FHn8CkT3MEy7xZHD53UsHz20sjz2Ut5WcXW14UHu5DjyRZH9yoLhbsO+zD2Q+f1DLFZGLIrLBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome (latest CDN link) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-RXf+QSDCUQs6FHn8CkT3MEy7xZHD53UsHz20sjz2Ut5WcXW14UHu5DjyRZH9yoLhbsO+zD2Q+f1DLFZGLIrLBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- YouTube embed responsive styling -->
+  <!-- Responsive YouTube wrapper -->
   <style>
-    .embed-container {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      max-width: 100%;
-    }
-
-    .embed-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
+    .embed-container{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;max-width:100%}
+    .embed-container iframe{position:absolute;top:0;left:0;width:100%;height:100%}
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <!-- profile -->
     <div class="image-container">
       <img src="images/profile.jpg" alt="Picture of Wyatt Smith" />
     </div>
 
-    <h1>Hello! My name is Wyatt and I am from Roanoke, VA. I plan on majoring in Finance.</h1>
+    <h1>Hello! My name is Wyatt and I’m from Roanoke, VA.<br>I plan on majoring in Finance.</h1>
 
-    <!-- Blog Post -->
-    <div class="button toggle"><i class="fab fa-medium"></i> Blog post</div>
+    <!-- Blog post -->
+    <div class="button toggle">
+      <i class="fa-brands fa-medium"></i><span>Blog post</span>
+    </div>
     <div class="slidedown">
       <div class="description">
-        <h2>Blog post title</h2>
-        <p>My blog post had to do with the Tri-Whistle, an innovative way to change how sports complexes work through pitches.</p>
-        <a href="https://medium.com/@wyattsmith2121/a-solution-to-whistle-confusion-the-tri-whistle-03e1bfb609dc" class="button" target="_blank">
-          <i class="fab fa-medium"></i> Read
+        <h2>Tri-Whistle: ending whistle confusion</h2>
+        <p>An innovative way to change how sports complexes manage play—by using a three-tone whistle.</p>
+        <a class="button" target="_blank"
+           href="https://medium.com/@wyattsmith2121/a-solution-to-whistle-confusion-the-tri-whistle-03e1bfb609dc">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i><span>Read</span>
         </a>
       </div>
     </div>
 
     <!-- Podcast -->
-    <div class="button toggle"><i class="fab fa-soundcloud"></i> Podcast</div>
+    <div class="button toggle">
+      <i class="fa-brands fa-soundcloud"></i><span>Podcast</span>
+    </div>
     <div class="slidedown">
       <div class="description">
         <h2>Collaboration podcast with turtles</h2>
-        <p>We talk about content creation and the evolution of it. I specifically use MrBeast and compare his old and new content.</p>
-        <a href="https://soundcloud.com/bilal-aridi-95691137/turtles-final-version" class="button" target="_blank">
-          <i class="fab fa-soundcloud"></i> Listen
-        </a>
+        <p>We talk about content creation and its evolution, comparing early vs. current MrBeast videos.</p>
 
         <!-- SoundCloud embed -->
-        <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1715183180&color=%23000000&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-        </iframe>
+        <div class="embed-container" style="padding-bottom:166px">
+          <iframe scrolling="no" frameborder="no" allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1715183180&color=%232121ff&inverse=false&auto_play=false&show_user=true">
+          </iframe>
+        </div>
       </div>
     </div>
 
-    <!-- Video Project -->
-    <div class="button toggle"><i class="fab fa-youtube"></i> Video Project</div>
+    <!-- Video project -->
+    <div class="button toggle">
+      <i class="fa-brands fa-youtube"></i><span>Video Project</span>
+    </div>
     <div class="slidedown">
       <div class="description">
-        <h2>Rule of 72</h2>
-        <p>I briefly overview the economic rule known as The Rule of 72. I apply the rule and show how even broke college students can take advantage of the concept.</p>
-        <a href="https://www.youtube.com/watch?v=Ie45ncblqtQ" class="button" target="_blank">
-          <i class="fab fa-youtube"></i> Watch
-        </a>
+        <h2>The Rule of 72 Explained</h2>
+        <p>A quick explainer on this classic investing shortcut—even broke college students can use it.</p>
 
         <!-- YouTube embed -->
         <div class="embed-container">
@@ -89,22 +83,21 @@
       </div>
     </div>
 
-    <!-- About Me -->
+    <!-- About me -->
     <section id="about">
       <h2>About Me</h2>
-      <p>I am currently 19 and a freshman at Virginia Tech. Although I do not have a resume, I do have an Instagram that shows some parts of my personal life.</p>
-      <div class="links-container">
-        <a href="https://www.instagram.com/wyattsmith2121/" class="button" target="_blank">
-          <i class="fab fa-instagram"></i> Instagram
-        </a>
-      </div>
+      <p>I’m 19 and a freshman at Virginia Tech. Although I don’t have a résumé yet, my Instagram offers a peek into my life.</p>
+
+      <a class="button" target="_blank"
+         href="https://www.instagram.com/wyattsmith2121/">
+         <i class="fa-brands fa-instagram"></i><span>Instagram</span>
+      </a>
     </section>
   </div>
 
-  <footer>
-    <p>Created by Wyatt</p>
-  </footer>
+  <footer>Created by Wyatt</footer>
 
+  <!-- slider script -->
   <script src="js/slider.js"></script>
 </body>
 </html>
