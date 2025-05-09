@@ -2,11 +2,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggles = document.querySelectorAll(".toggle");
   const sliders = document.querySelectorAll(".slidedown");
 
+  
   sliders.forEach(slider => {
     slider.style.height = "0px";
   });
 
-  toggles.forEach(toggle => {
+  toggles.forEach((toggle) => {
     toggle.addEventListener("click", function () {
       let slider = this.nextElementSibling;
 
@@ -14,8 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
         slider.style.height = "0px";
         toggle.classList.remove("highlight");
       } else {
-        // close any open one
-        document.querySelectorAll(".toggle.highlight").forEach(t => {
+        
+        document.querySelectorAll(".toggle.highlight").forEach((t) => {
           t.classList.remove("highlight");
           t.nextElementSibling.style.height = "0px";
         });
