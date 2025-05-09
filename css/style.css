@@ -1,83 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /* ----------  color + font tokens ---------- */
-:root{
-  --primaryText:#fff;
-  --primary:rgba(0,0,139,.75);    /* dark-blue buttons   */
-  --primaryHover:rgba(0,0,139,.55);
-  --highlight:#ff015e;            /* clicked/highlight   */
+:root {
+  --primaryText: #fff;
+  --primary: rgba(0,0,139,.75);    /* dark-blue buttons   */
+  --primaryHover: rgba(0,0,139,.55);
+  --highlight: #ff015e;            /* clicked/highlight   */
 }
 
 /* ----------  global reset ---------- */
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
 
 /* ----------  base layout ---------- */
-body{
-  font-family:'Roboto',sans-serif;
-  color:var(--primaryText);
-  background:linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.15)),
-             url(../images/background.jpg) center/cover fixed no-repeat;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding-top:2em;
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--primaryText);
+  background:
+    linear-gradient(rgba(0,0,0,.15), rgba(0,0,0,.15)),
+    url(../images/background.jpg) center/cover fixed no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2em;
 }
-h1,h2,p{text-align:center;margin-bottom:.7em}
-.container{max-width:800px;width:100%;display:flex;flex-direction:column;align-items:center;padding:1em}
 
-img{border-radius:50%;height:150px;width:150px;object-fit:cover;margin:.5em auto}
+.container {
+  flex: 1;                         /* ← added */
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+/* ----------  About section ---------- */
+#about {
+  margin-top: 2em;                /* ← added */
+}
+
+img {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin: .5em auto;
+}
 
 /* ----------  buttons (incl. icons) ---------- */
-.button{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:.45em;                   /* space between icon & text */
-  background:var(--primary);
-  border:1px solid var(--primaryText);
-  border-radius:20px;
-  padding:.55em 1.2em;
-  width:260px;                /* <- all buttons (Instagram too) */
-  margin:.6em auto;
-  text-decoration:none;
-  color:var(--primaryText);
-  box-shadow:7px 6px 28px 1px rgba(0,0,0,.24);
-  transition:.2s;
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .45em;                     /* space between icon & text */
+  background: var(--primary);
+  border: 1px solid var(--primaryText);
+  border-radius: 20px;
+  padding: .55em 1.2em;
+  width: 260px;                   /* ← all buttons (Instagram too) */
+  margin: .6em auto;
+  text-decoration: none;
+  color: var(--primaryText);
+  box-shadow: 7px 6px 28px 1px rgba(0,0,0,.24);
+  transition: .2s;
 }
-.button:hover{background:var(--primaryHover)}
-.button.highlight{background:var(--highlight)}
-.button i{color:inherit}      /* keep icons white */
+.button:hover { background: var(--primaryHover); }
+.button.highlight { background: var(--highlight); }
+.button i { color: inherit; }    /* keep icons white */
 
 /* ----------  accordion content ---------- */
-.slidedown{
-  width:100%;max-width:500px;
-  overflow:hidden;height:0;
-  transition:height .4s ease;
-  margin:0 auto;
+.slidedown {
+  width: 100%; max-width: 500px;
+  overflow: hidden; height: 0;
+  transition: height .4s ease;
+  margin: 0 auto;
 }
-.description{
-  background:rgba(0,0,0,.4);
-  border-radius:10px;
-  padding:1em;
-  margin-bottom:1em;
+.description {
+  background: rgba(0,0,0,.4);
+  border-radius: 10px;
+  padding: 1em;
+  margin-bottom: 1em;
 }
-.embed-container,iframe{border-radius:10px;margin-top:1em}
+.embed-container, iframe {
+  border-radius: 10px;
+  margin-top: 1em;
+}
 
 /* ----------  footer ---------- */
-footer{
-  width:100%;
-  text-align:center;
-  font-size:.8em;
-  padding:1em 0;
-  background:rgba(0,0,0,.5);
-  color:rgba(225,225,225,.85);
+footer {
+  width: 100%;
+  text-align: center;
+  font-size: .8em;
+  padding: 1em 0;
+  background: rgba(0,0,0,.5);
+  color: rgba(225,225,225,.85);
 }
 
 /* ----------  responsive tweaks ---------- */
-@media(min-width:540px){
-  .button,.slidedown{width:85%}
+@media (min-width: 540px) {
+  .button, .slidedown { width: 85%; }
 }
-@media(min-width:768px){
-  .button,.slidedown{width:60%}
+@media (min-width: 768px) {
+  .button, .slidedown { width: 60%; }
 }
