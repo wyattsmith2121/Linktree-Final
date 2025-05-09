@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/* ----------  color + font tokens ---------- */
 :root{
   --primaryText:#fff;
-  --primary:rgba(0,0,139,.75);     /* dark-blue buttons   */
+  --primary:rgba(0,0,139,.75);    /* dark-blue buttons   */
   --primaryHover:rgba(0,0,139,.55);
-  --highlight:#ff015e;             /* highlight colour    */
+  --highlight:#ff015e;            /* clicked/highlight   */
 }
 
+/* ----------  global reset ---------- */
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{height:100%}
 
+/* ----------  base layout ---------- */
 body{
   font-family:'Roboto',sans-serif;
   color:var(--primaryText);
@@ -20,23 +23,22 @@ body{
   align-items:center;
   padding-top:2em;
 }
-
 h1,h2,p{text-align:center;margin-bottom:.7em}
 .container{max-width:800px;width:100%;display:flex;flex-direction:column;align-items:center;padding:1em}
 
 img{border-radius:50%;height:150px;width:150px;object-fit:cover;margin:.5em auto}
 
-/* ---------- buttons ---------- */
+/* ----------  buttons (incl. icons) ---------- */
 .button{
-  display:flex;                 
+  display:flex;
   align-items:center;
   justify-content:center;
-  gap:.5em;                    
+  gap:.45em;                   /* space between icon & text */
   background:var(--primary);
   border:1px solid var(--primaryText);
   border-radius:20px;
   padding:.55em 1.2em;
-  width:220px;                
+  width:260px;                /* <- all buttons (Instagram too) */
   margin:.6em auto;
   text-decoration:none;
   color:var(--primaryText);
@@ -45,18 +47,37 @@ img{border-radius:50%;height:150px;width:150px;object-fit:cover;margin:.5em auto
 }
 .button:hover{background:var(--primaryHover)}
 .button.highlight{background:var(--highlight)}
+.button i{color:inherit}      /* keep icons white */
 
+/* ----------  accordion content ---------- */
 .slidedown{
   width:100%;max-width:500px;
-  overflow:hidden;height:0;transition:height .4s ease;margin:0 auto;
+  overflow:hidden;height:0;
+  transition:height .4s ease;
+  margin:0 auto;
 }
-.description{background:rgba(0,0,0,.4);border-radius:10px;padding:1em;margin-bottom:1em}
+.description{
+  background:rgba(0,0,0,.4);
+  border-radius:10px;
+  padding:1em;
+  margin-bottom:1em;
+}
 .embed-container,iframe{border-radius:10px;margin-top:1em}
 
-/* footer */
-footer{width:100%;text-align:center;font-size:.8em;padding:1em 0;
-        background:rgba(0,0,0,.5);color:rgba(225,225,225,.85)}
+/* ----------  footer ---------- */
+footer{
+  width:100%;
+  text-align:center;
+  font-size:.8em;
+  padding:1em 0;
+  background:rgba(0,0,0,.5);
+  color:rgba(225,225,225,.85);
+}
 
-/* responsive width tweaks */
-@media(min-width:540px){.button,.slidedown{width:85%}}
-@media(min-width:768px){.button,.slidedown{width:60%}}
+/* ----------  responsive tweaks ---------- */
+@media(min-width:540px){
+  .button,.slidedown{width:85%}
+}
+@media(min-width:768px){
+  .button,.slidedown{width:60%}
+}
